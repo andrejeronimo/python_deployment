@@ -1,5 +1,3 @@
-@Library('powerpony') _
-
 pipeline {
     agent any
 
@@ -20,7 +18,7 @@ pipeline {
             }
             steps {
                 script {
-                    buildPythonPackage()
+                    sh 'python setup.py sdist'
                 }
             }
         }
